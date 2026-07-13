@@ -87,13 +87,13 @@ p { margin: 0 0 1.1rem; }
 .hero-bg-blur,
 .closing-bg-blur {
   position: absolute;
-  inset: -35px;
-  background-image: url("images/portada.png");
+  inset: 0;
+  background-image: url("images/cierre.png");
   background-position: center;
   background-size: cover;
-  filter: blur(28px) saturate(.72);
-  transform: scale(1.08);
-  opacity: .72;
+  filter: none;
+  transform: none;
+  opacity: 1;
 }
 .hero-photo-frame,
 .closing-photo-frame {
@@ -116,8 +116,7 @@ p { margin: 0 0 1.1rem; }
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(20,28,22,.18), rgba(20,28,22,.12) 45%, rgba(20,28,22,.30)),
-    rgba(76,96,80,.06);
+    linear-gradient(180deg, rgba(17,24,19,.20), rgba(17,24,19,.10) 46%, rgba(17,24,19,.30));
 }
 .nav {
   position: absolute; top: 0; left: 0; right: 0; z-index: 3;
@@ -232,7 +231,12 @@ p { margin: 0 0 1.1rem; }
   background: var(--sage-900);
 }
 .closing-bg-blur { background-image: url("images/cierre.png"); }
-.closing-overlay { position: absolute; inset: 0; background: rgba(34,48,39,.66); }
+.closing-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(17,24,19,.20), rgba(17,24,19,.10) 46%, rgba(17,24,19,.30));
+}
 .closing-content { position: relative; z-index: 1; width: min(790px, calc(100% - 36px)); }
 .closing-content h2 { font-size: clamp(3.4rem, 8vw, 7rem); }
 .closing-monogram { margin: 34px 0 15px; font: 500 3rem var(--serif); }
@@ -395,12 +399,12 @@ footer { padding: 20px; background: var(--sage-900); color: rgba(255,255,255,.65
 /* V5: portada con una sola foto desenfocada de fondo */
 .hero-bg-blur {
   position: absolute;
-  inset: -8px;
+  inset: 0;
   background-image: url("images/portada.png");
   background-position: center;
   background-size: cover;
-  filter: blur(4px) saturate(.92);
-  transform: scale(1.02);
+  filter: none;
+  transform: none;
   opacity: 1;
 }
 .hero-overlay {
