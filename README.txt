@@ -1,7 +1,7 @@
 INVITACIÓN WEB — MANUEL & GIULIANA
 ====================================
 
-CÓMO VERLA
+CÓMO VERLAS
 1. Descomprimí el ZIP.
 2. Abrí la carpeta.
 3. Hacé doble clic en index.html.
