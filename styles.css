@@ -592,3 +592,26 @@ html.loading-page {
     -webkit-backdrop-filter: blur(2px) !important;
   }
 }
+
+
+/* V17: "Nos casamos" más elegante */
+.hero .eyebrow{
+  background: transparent !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+  padding:0 !important;
+  border-radius:0 !important;
+  letter-spacing:.32em !important;
+  font-weight:600 !important;
+  color:#fff !important;
+  text-shadow:
+    0 1px 2px rgba(0,0,0,.55),
+    0 0 18px rgba(0,0,0,.25) !important;
+}
+
+@media (max-width:820px){
+  .hero .eyebrow{
+    margin-bottom:18px !important;
+    font-size:.95rem !important;
+  }
+}
