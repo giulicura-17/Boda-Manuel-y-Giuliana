@@ -622,3 +622,21 @@ html.loading-page {
 .closing-overlay{
     background: rgba(255,255,255,0.10) !important;
 }
+
+
+/* V19: mejorar legibilidad del texto en portada y cierre */
+.hero-content,
+.hero-content * ,
+.closing-content,
+.closing-content *{
+  text-shadow:
+    0 2px 4px rgba(0,0,0,.35),
+    0 6px 18px rgba(0,0,0,.28),
+    0 0 2px rgba(0,0,0,.25) !important;
+}
+
+.hero .eyebrow,
+.closing-content .eyebrow{
+  letter-spacing:.28em;
+}
+
