@@ -1,3 +1,5 @@
+if("scrollRestoration" in history){history.scrollRestoration="manual";}
+window.addEventListener("load",()=>window.scrollTo(0,0));
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 window.addEventListener('pageshow', () => {
   if (!window.location.hash) window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
