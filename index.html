@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="loading-page">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#738575" />
   <meta name="description" content="Invitación a la boda de Manuel y Giuliana — 6 de noviembre de 2026." />
   <title>Manuel & Giuliana | 06.11.2026</title>
+
+  <script>
+    (function () {
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+
+      if (location.hash) {
+        history.replaceState(null, document.title, location.pathname + location.search);
+      }
+
+      document.documentElement.style.scrollBehavior = "auto";
+      window.scrollTo(0, 0);
+    })();
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -156,7 +172,7 @@
         </div>
         <div class="gift-intro reveal">
           <p>Tu presencia en la boda es el único regalo que pedimos.</p>
-          <p>Sabemos que a muchos les gustría tener un gesto adicional, ¡y se los agradecemos de corazón! Como vivimos en Múnich y volvemos con la valija al límite, si desean colaborar con algo, lo más práctico es hacerlo mediante una transferencia.</p>
+          <p>Sabemos que a muchos les gusta tener un gesto adicional, ¡y se los agradecemos de corazón! Como vivimos en Múnich y volvemos con la valija al límite, si desean colaborar con algo, lo más práctico es hacerlo mediante una transferencia.</p>
         </div>
 
         <div class="gift-options reveal">
@@ -181,9 +197,9 @@
           <details>
             <summary><span>Alemania</span><strong>Euros · EUR</strong></summary>
             <div class="account-data" data-account="eur">
-              <p><b>IBAN:</b> <span>DE86700400410290411800</span></p>
-              <p><b>BIC:</b> <span>COBADEFFXXX</span></p>
-              <p><b>Titular:</b> <span>Giuliana Francine Cura Manuel Luque Meijide</span></p>
+              <p><b>IBAN:</b> <span>COMPLETAR IBAN</span></p>
+              <p><b>BIC:</b> <span>COMPLETAR BIC</span></p>
+              <p><b>Titular:</b> <span>COMPLETAR TITULAR</span></p>
               <button class="copy-account" type="button">Copiar datos</button>
             </div>
           </details>
@@ -261,5 +277,14 @@
 
   <script src="config.js"></script>
   <script src="script.js"></script>
+
+  <script>
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        document.documentElement.classList.remove("loading-page");
+      }, 350);
+    });
+  </script>
+
 </body>
 </html>

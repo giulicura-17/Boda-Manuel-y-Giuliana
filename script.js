@@ -1,3 +1,43 @@
+
+/* V15: forzar apertura siempre desde la portada */
+(function forceStartAtTop() {
+  function resetToTop() {
+    if (location.hash) {
+      history.replaceState(null, document.title, location.pathname + location.search);
+    }
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }
+
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+
+  resetToTop();
+
+  document.addEventListener("DOMContentLoaded", () => {
+    resetToTop();
+    requestAnimationFrame(resetToTop);
+    setTimeout(resetToTop, 50);
+    setTimeout(resetToTop, 250);
+  });
+
+  window.addEventListener("load", () => {
+    resetToTop();
+    requestAnimationFrame(resetToTop);
+    setTimeout(resetToTop, 100);
+  });
+
+  window.addEventListener("pageshow", event => {
+    resetToTop();
+    if (event.persisted) {
+      requestAnimationFrame(resetToTop);
+      setTimeout(resetToTop, 100);
+    }
+  });
+})();
+
 if("scrollRestoration" in history){history.scrollRestoration="manual";}
 window.addEventListener("load",()=>window.scrollTo(0,0));
 if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
