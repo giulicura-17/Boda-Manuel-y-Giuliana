@@ -84,17 +84,7 @@ p { margin: 0 0 1.1rem; }
   color: white;
   background: var(--sage-900);
 }
-.hero-bg-blur,
-.closing-bg-blur {
-  position: absolute;
-  inset: 0;
-  background-image: url("images/cierre.png");
-  background-position: center;
-  background-size: cover;
-  filter: none;
-  transform: none;
-  opacity: 1;
-}
+
 .hero-photo-frame,
 .closing-photo-frame {
   position: absolute;
@@ -112,12 +102,7 @@ p { margin: 0 0 1.1rem; }
   border: 1px solid rgba(255,255,255,.35);
   box-shadow: 0 28px 90px rgba(0,0,0,.35);
 }
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg, rgba(17,24,19,.20), rgba(17,24,19,.10) 46%, rgba(17,24,19,.30));
-}
+
 .nav {
   position: absolute; top: 0; left: 0; right: 0; z-index: 3;
   display: flex; justify-content: space-between; align-items: center;
@@ -230,13 +215,8 @@ p { margin: 0 0 1.1rem; }
   text-align: center;
   background: var(--sage-900);
 }
-.closing-bg-blur { background-image: url("images/cierre.png"); }
-.closing-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg, rgba(17,24,19,.20), rgba(17,24,19,.10) 46%, rgba(17,24,19,.30));
-}
+
+
 .closing-content { position: relative; z-index: 1; width: min(790px, calc(100% - 36px)); }
 .closing-content h2 { font-size: clamp(3.4rem, 8vw, 7rem); }
 .closing-monogram { margin: 34px 0 15px; font: 500 3rem var(--serif); }
@@ -371,8 +351,8 @@ footer { padding: 20px; background: var(--sage-900); color: rgba(255,255,255,.65
 
 .hero-photo-frame img,
 .closing-photo-frame img { filter: saturate(.78) brightness(.82); }
-.hero-overlay { background: linear-gradient(180deg, rgba(22,31,25,.72), rgba(22,31,25,.58) 42%, rgba(22,31,25,.76)); }
-.closing-overlay { background: rgba(34,48,39,.70); }
+
+
 
 .nav-links a { position: relative; }
 .nav-links a::after {
@@ -397,30 +377,13 @@ footer { padding: 20px; background: var(--sage-900); color: rgba(255,255,255,.65
 
 
 /* V5: portada con una sola foto desenfocada de fondo */
-.hero-bg-blur {
-  position: absolute;
-  inset: 0;
-  background-image: url("images/portada.png");
-  background-position: center;
-  background-size: cover;
-  filter: none;
-  transform: none;
-  opacity: 1;
-}
-.hero-overlay {
-  background:
-    linear-gradient(180deg, rgba(28,42,33,.48) 0%, rgba(40,57,46,.38) 43%, rgba(24,36,29,.62) 100%),
-    rgba(103,122,107,.10);
-}
+
+
 .hero-content {
   transform: translateY(-3vh);
 }
 @media (max-width: 820px) {
-  .hero-bg-blur {
-    inset: -30px;
-    filter: blur(15px) saturate(.70) brightness(.70);
-    transform: scale(1.12);
-  }
+  
   .hero-content { transform: translateY(-2vh); }
 }
 
@@ -428,4 +391,58 @@ footer { padding: 20px; background: var(--sage-900); color: rgba(255,255,255,.65
   .story-copy {
     margin-bottom: 18px;
   }
+}
+
+
+/* --- V11: portada y cierre nítidos y más claros --- */
+.hero,
+.closing-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg-blur,
+.closing-bg-blur {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: none !important;
+  -webkit-filter: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  transform: none !important;
+  opacity: 1 !important;
+}
+
+.hero-bg-blur {
+  background-image: url("images/portada.png");
+}
+
+.closing-bg-blur {
+  background-image: url("images/cierre.png");
+}
+
+.hero-overlay,
+.closing-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 22, 17, 0.08) !important;
+  opacity: 1 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+.hero-content,
+.closing-content,
+.nav {
+  position: relative;
+  z-index: 2;
+}
+
+/* Un poco de sombra al texto para mantener legibilidad sin oscurecer la foto */
+.hero-content,
+.closing-content {
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.28);
 }
