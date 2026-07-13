@@ -446,3 +446,23 @@ footer { padding: 20px; background: var(--sage-900); color: rgba(255,255,255,.65
 .closing-content {
   text-shadow: 0 2px 16px rgba(0, 0, 0, 0.28);
 }
+
+
+/* V12 adjustments */
+.hero-overlay,
+.closing-overlay{
+  background: rgba(0,0,0,0.03) !important;
+}
+
+.closing-bg-blur{
+  background-size: contain !important;
+  background-repeat:no-repeat !important;
+  background-position:center center !important;
+  transform:none !important;
+}
+
+.hero-bg-blur{
+  background-size: cover !important;
+  background-position:center center !important;
+  transform:none !important;
+}
