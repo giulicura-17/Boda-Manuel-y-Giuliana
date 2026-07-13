@@ -112,7 +112,13 @@ p { margin: 0 0 1.1rem; }
   border: 1px solid rgba(255,255,255,.35);
   box-shadow: 0 28px 90px rgba(0,0,0,.35);
 }
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(22,31,25,.66), rgba(22,31,25,.52) 42%, rgba(22,31,25,.72)); }
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(20,28,22,.18), rgba(20,28,22,.12) 45%, rgba(20,28,22,.30)),
+    rgba(76,96,80,.06);
+}
 .nav {
   position: absolute; top: 0; left: 0; right: 0; z-index: 3;
   display: flex; justify-content: space-between; align-items: center;
@@ -388,12 +394,14 @@ footer { padding: 20px; background: var(--sage-900); color: rgba(255,255,255,.65
 
 /* V5: portada con una sola foto desenfocada de fondo */
 .hero-bg-blur {
-  inset: -42px;
+  position: absolute;
+  inset: -8px;
+  background-image: url("images/portada.png");
   background-position: center;
   background-size: cover;
-  filter: blur(18px) saturate(.68) brightness(.72);
-  transform: scale(1.10);
-  opacity: .88;
+  filter: blur(4px) saturate(.92);
+  transform: scale(1.02);
+  opacity: 1;
 }
 .hero-overlay {
   background:
