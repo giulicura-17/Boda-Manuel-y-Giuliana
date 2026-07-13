@@ -147,3 +147,18 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape' && lightbox.c
 document.querySelectorAll('.details-grid .detail-card, .gallery figure, .gift-options details, .faq-list details').forEach((el, index) => {
   el.style.transitionDelay = `${Math.min(index * 55, 275)}ms`;
 });
+
+const dressBtn=document.getElementById("open-dress-gallery");
+const dressModal=document.getElementById("dress-modal");
+const dressClose=dressModal?.querySelector(".dress-modal-close");
+function openDress(){dressModal?.classList.add("open");dressModal?.setAttribute("aria-hidden","false");document.body.classList.add("menu-open")}
+function closeDress(){dressModal?.classList.remove("open");dressModal?.setAttribute("aria-hidden","true");document.body.classList.remove("menu-open")}
+dressBtn?.addEventListener("click",openDress);
+dressClose?.addEventListener("click",closeDress);
+dressModal?.addEventListener("click",e=>{if(e.target===dressModal)closeDress()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeDress()});
+document.querySelectorAll(".dress-grid img").forEach(img=>img.addEventListener("click",()=>{
+  const lb=document.getElementById("lightbox"), lbi=lb?.querySelector("img");
+  if(!lb||!lbi)return;
+  lbi.src=img.src;lbi.alt=img.alt;lb.classList.add("open");lb.setAttribute("aria-hidden","false");
+}));

@@ -161,7 +161,7 @@
           <span style="--tone:#8e7770"></span>
           <span style="--tone:#4f6155"></span>
         </div>
-        <a class="button" data-link="pinterest" href="#" target="_blank" rel="noopener"><span>Ver colores y ejemplos</span><span class="button-arrow" aria-hidden="true">→</span></a>
+        <button class="button" id="open-dress-gallery" type="button">Ver inspiración</button>
       </div>
     </section>
 
@@ -172,7 +172,7 @@
         </div>
         <div class="gift-intro reveal">
           <p>Tu presencia en la boda es el único regalo que pedimos.</p>
-          <p>Sabemos que a muchos les gustaría tener un gesto adicional, ¡y se los agradecemos de corazón! Como vivimos en Múnich y volvemos con la valija al límite, si desean colaborar con algo, lo más práctico es hacerlo mediante una transferencia.</p>
+          <p>Sabemos que a muchos les gusta tener un gesto adicional, ¡y se los agradecemos de corazón! Como vivimos en Múnich y volvemos con la valija al límite, si desean colaborar con algo, lo más práctico es hacerlo mediante una transferencia.</p>
         </div>
 
         <div class="gift-options reveal">
@@ -197,9 +197,9 @@
           <details>
             <summary><span>Alemania</span><strong>Euros · EUR</strong></summary>
             <div class="account-data" data-account="eur">
-              <p><b>IBAN:</b> <span>DE86700400410290411800</span></p>
-              <p><b>BIC:</b> <span>COBADEFFXXX</span></p>
-              <p><b>Titular:</b> <span>Giuliana Francine Cura Manuel Luque Meijide</span></p>
+              <p><b>IBAN:</b> <span>COMPLETAR IBAN</span></p>
+              <p><b>BIC:</b> <span>COMPLETAR BIC</span></p>
+              <p><b>Titular:</b> <span>COMPLETAR TITULAR</span></p>
               <button class="copy-account" type="button">Copiar datos</button>
             </div>
           </details>
@@ -268,6 +268,38 @@
   <footer>
     <p>Manuel & Giuliana · Palacio Sans Souci</p>
   </footer>
+
+
+  <div class="dress-modal" id="dress-modal" aria-hidden="true">
+    <div class="dress-modal-panel" role="dialog" aria-modal="true" aria-labelledby="dress-modal-title">
+      <button class="dress-modal-close" type="button" aria-label="Cerrar">×</button>
+      <div class="dress-modal-header">
+        <p class="eyebrow">Dress code formal</p>
+        <h2 id="dress-modal-title">Inspiración</h2>
+        <p>Estas imágenes son solo una guía de estilo.</p>
+      </div>
+      <h3>Mujeres</h3>
+      <div class="dress-grid">
+        <img src="images/dress-1.png" alt="Inspiración mujeres 1">
+        <img src="images/dress-2.png" alt="Inspiración mujeres 2">
+        <img src="images/dress-3.png" alt="Inspiración mujeres 3">
+        <img src="images/dress-4.png" alt="Inspiración mujeres 4">
+        <img src="images/dress-5.png" alt="Inspiración mujeres 5">
+        <img src="images/dress-6.png" alt="Inspiración mujeres 6">
+        <img src="images/dress-7.png" alt="Inspiración mujeres 7">
+        <img src="images/dress-8.png" alt="Inspiración mujeres 8">
+      </div>
+      <h3 class="men-title">Hombres</h3>
+      <div class="dress-grid">
+        <img src="images/men-1.png" alt="Inspiración hombres 1">
+        <img src="images/men-2.png" alt="Inspiración hombres 2">
+        <img src="images/men-3.png" alt="Inspiración hombres 3">
+        <img src="images/men-4.png" alt="Inspiración hombres 4">
+        <img src="images/men-5.png" alt="Inspiración hombres 5">
+        <img src="images/men-6.png" alt="Inspiración hombres 6">
+      </div>
+    </div>
+  </div>
 
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <button class="lightbox-close" type="button" aria-label="Cerrar imagen">×</button>
